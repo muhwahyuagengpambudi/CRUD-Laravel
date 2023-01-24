@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/sign-in.css" />
+    <link rel="stylesheet" href="/style/sign-in.css" />
   </head>
   <body>
     @include('partials.navbar')

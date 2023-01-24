@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PublisherController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +43,15 @@ Route::group(["prefix" => "/publisher"], function(){
     Route::get('/detail/{publishers}', [PublisherController::class, 'show']); //detail
 });
 
+Route::get('/index', [LoginController::class, 'index']);
+Route::post('/index', [LoginController::class, 'auth'])->name('auth.action');
 
+// Route::get('/index', [RegisterController::class, 'index']);
 
+Route::post('/create', [RegisterController::class,'create']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/dashboard', function (){
+    return view('dashboard.index');
+});
 

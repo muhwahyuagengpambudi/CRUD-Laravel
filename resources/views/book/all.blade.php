@@ -8,13 +8,11 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-12">
-                        @if (session()->has('succes'))
-                        <div class="alert alert-success col-lg-12" role="alert">
-                        {{ session ('succes')}}
-                        </div>
-                        @endif
                         <table class="table">
+                            @auth
                             <a type="button" class="btn btn-primary"  href="/book/create" >Add New Data</a>
+                            @else          
+                            @endauth
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -31,15 +29,18 @@
                                 <td>{{ $book->nama }}</td>
                                 <td >{{ $book->author }}</td>
                                 <td >{{ $book->harga }}</td>
-                                <td>
-                                    <a type="button" class="btn btn-primary"  href="/book/detail/{{ $book->id }}" >Detail</a>
-                                    <a type="button" class="btn btn-warning"  href="/book/edit/{{ $book->id }}" >Edit</a>
-                                    <form action="/book/delete/{{ $book->id}}" method="post" class="d-inline">
-                                        @method('delete')
-                                        @csrf
-                                        <button class="btn btn-danger" onclick="return confirm('Are you sure ?')">Hapus</button>
-                                    </form>
-                                </td>
+                               @auth
+                               <td>
+                                <a type="button" class="btn btn-primary"  href="/book/detail/{{ $book->id }}" >Detail</a>
+                                <a type="button" class="btn btn-warning"  href="/book/edit/{{ $book->id }}" >Edit</a>
+                                <form action="/book/delete/{{ $book->id}}" method="post" class="d-inline">
+                                    @method('delete')
+                                    @csrf
+                                    <button class="btn btn-danger" onclick="return confirm('Are you sure ?')">Hapus</button>
+                                </form>
+                            </td>
+                            @else
+                               @endauth
                               </tr>
                             </tbody>
                             @endforeach
