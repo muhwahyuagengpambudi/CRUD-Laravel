@@ -8,6 +8,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PublisherController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardBookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,3 +56,18 @@ Route::get('/dashboard', function (){
     return view('dashboard.index');
 });
 
+Route::group(["prefix" => "/dashboard"], function () {
+    Route::get('/', function () {
+        return view('dashboard.index');
+})->middleware('auth');
+
+Route::group(["prefix" => "/book"], function(){
+    Route::get('/all', [DashboardBookController::class, 'index'])->middleware('auth');
+    Route::get('/detail/{book}', [DashboardBookController::class, 'show'])->middleware('auth');
+    Route::get('/create', [DashboardBookController::class, 'create'])->middleware('auth');
+    Route::post('/add', [DashboardBookController::class, 'store'])->middleware('auth');
+    Route::delete('/delete/{book}', [DashboardBookController::class, 'destroy'])->middleware('auth'); 
+    Route::get('/edit/{book}', [DashboardBookController::class, 'edit'])->middleware('auth');
+    Route::post('/update/{book}', [DashboardBookController::class, 'update'])->middleware('auth');
+    });
+});
