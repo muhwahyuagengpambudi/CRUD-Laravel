@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Models\Publisher;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;    
+use App\Http\Controllers\Controller;  
+use Illuminate\Support\Facades\DB;  
 
 
 class DashboardBookController extends Controller
@@ -12,7 +13,7 @@ class DashboardBookController extends Controller
     public function index()
     {
        return view('dashboard.book.all', [
-        'books'=>Book::all()
+        'books'=>DB::table('books')->paginate(5)
        ]);
     }
 

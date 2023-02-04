@@ -1,7 +1,6 @@
 @extends('dashboard.layouts.main')
 @section('content')
 
-
 <div class="container">
     <h3 class="text-center mt-3">Book List</h3>
         <div class="card">
@@ -23,9 +22,12 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @php
+                                $i = $books->firstItem()
+                                @endphp
                                 @foreach ($books as $book)
                               <tr>
-                                <td>{{ $book->id }}</td>
+                                <td>{{  $i++;  }}</td>
                                 <td>{{ $book->nama }}</td>
                                 <td >{{ $book->author }}</td>
                                 <td >{{ $book->harga }}</td>
@@ -45,6 +47,10 @@
                             </tbody>
                             @endforeach
                           </table>
+                          {{-- Pagination --}}
+                     {{-- <div class="d-flex justify-content-center"> --}}
+                        {!! $books->links() !!}
+                {{-- </div> --}}
                     </div>
                 </div>
             </div>
