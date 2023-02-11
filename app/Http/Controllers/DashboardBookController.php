@@ -13,7 +13,8 @@ class DashboardBookController extends Controller
     public function index()
     {
        return view('dashboard.book.all', [
-        'books'=>DB::table('books')->paginate(5)
+        'publisher' => Publisher::all(),
+        'books' => Book::filter(request(['search', 'category']))->paginate(5)
        ]);
     }
 
