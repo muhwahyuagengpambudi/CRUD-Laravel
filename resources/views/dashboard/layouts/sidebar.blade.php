@@ -8,22 +8,16 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
-          <span data-feather="file" class="align-text-bottom"></span>
-          About
-        </a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link {{ Request::is('dashboard/book/all') ? 'active' :''}}" href="/dashboard/book/all">
           <span data-feather="book" class="align-text-bottom"></span>
           Book
         </a>
       </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" href="#">
           <span data-feather="users" class="align-text-bottom"></span>
           Publisher
         </a>
-      </li>
+      </li> --}}
     </ul>
 </nav>

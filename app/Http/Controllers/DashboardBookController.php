@@ -71,4 +71,12 @@ class DashboardBookController extends Controller
         ->update($validateData);
         return redirect('/dashboard/book/all')->with('succes', 'Data has been updated !');
     }
+
+    public function publisher(Publisher $publisher){
+        return view('publisher.all', [
+            'publishers' => publisher::paginate(5),
+            'book' => $book->id
+        ]);
+
+    }
 }

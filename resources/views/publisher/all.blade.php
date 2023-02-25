@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 <div class="container">
-    <h3 class="text-center mt-3">Data</h3>
+    <h3 class="text-center mt-3 mb-5 mt-5">Publisher</h3>
         <div class="card">
             <div class="card-body">
                 <div class="row">

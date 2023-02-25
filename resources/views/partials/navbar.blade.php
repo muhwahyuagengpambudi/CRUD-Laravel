@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light shadow-sm p-3 mb-5 bg-body rounded">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">Navbar</a>
+      <a class="navbar-brand" href="/">My Book</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -17,10 +17,10 @@
           </li>
           
         </ul>
-        <form class="d-flex" role="search" style="margin-top: 5px;">
+        {{-- <form class="d-flex" role="search" style="margin-top: 5px;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          {{-- <button class="btn btn-outline-success" type="submit">Search</button> --}}
-        </form>
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> --}}
         <ul style="list-style: none; margin-bottom: -1px;">
          
           

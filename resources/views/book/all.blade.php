@@ -1,9 +1,7 @@
 @extends('layouts.main')
 @section('content')
-
-
 <div class="container">
-    <h3 class="text-center mt-3">Book List</h3>
+    <h3 class="text-center mb-5 mt-5">Book List</h3>
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -19,7 +17,7 @@
                                     <th scope="col">nama</th>
                                     <th scope="col">pengarang</th>
                                     <th scope="col">harga</th>
-                                    <th scope="col">aksi</th>
+                                    {{-- <th scope="col">aksi</th> --}}
                                 </tr>
                             </thead>
                             <tbody>

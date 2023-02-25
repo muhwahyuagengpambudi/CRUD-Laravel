@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="/css/sign-in.css">
 </head>
@@ -14,17 +13,17 @@
             <input type="checkbox" id="flip" />
             <div class="cover">
               <div class="front">
-                <img src="/assets/logo.png" alt="" />
+                <img src="/assets/book.jpg" alt="" />
                 <div class="text">
                   <span class="text-1"
                     >Welcome to<br />
-                    EcoFam</span 
+                    My Book</span 
                   >
                   <span class="text-2">please fill in first!</span>
                 </div>
               </div>
               <div class="back">
-                <img class="backImg" src="/assets/logo.png" alt="" />
+                <img class="backImg" src="/assets/book.jpg" alt="" />
                 <div class="text">
                   <span class="text-1"
                     >Complete miles of journey <br />

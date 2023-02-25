@@ -2,8 +2,8 @@
 @section('content')
 
 <div class="container">
-    <h3 class="text-center mt-3">Book List</h3>
-        <div class="card">
+    <h3 class="text-center mt-5 ">Book List</h3>
+        <div class="card ">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-12">
@@ -17,7 +17,7 @@
                             @endauth
                             <div class="col-md-3 mt-3 me-4 ms-2">
                                 <select class="form-select" name="category" id="">
-                                    <option name="book_id" value="0"> -- Semua Kelas--</option>
+                                    <option name="book_id" value="0"> -- Semua Pen--</option>
                                     @foreach ($publisher as $item)
                                     @if (request('category') == $item->id)
                                     <option name="category" value="{{ $item->id }}" selected>{{ $item->nama }}</option>
